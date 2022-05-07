@@ -19,6 +19,7 @@ Heroku link is here (TBD)
 **Technology Used:**
 
 - JavaScript
+- CSS
 - Express.js
 - Handlebars.js
 - Sequelize
