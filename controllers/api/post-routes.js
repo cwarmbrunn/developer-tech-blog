@@ -10,7 +10,7 @@ router.get("/", (req, res) => {
   Post.findAll({
     attributes: [
       "id",
-      "post_url",
+      "post_data",
       "title",
       "created_at",
       [
@@ -50,7 +50,7 @@ router.get("/:id", (req, res) => {
     where: { id: req.params.id },
     attributes: [
       "id",
-      "post_url",
+      "post_data",
       "title",
       "created_at",
       [
@@ -90,12 +90,12 @@ router.get("/:id", (req, res) => {
 router.post("/", withAuth, (req, res) => {
   // Expects the following:
   // {title: "Riot Games Careers Page",
-  // post_url:"https://www.riotgames.com/en/work-with-us",
+  // post_data:"https://www.riotgames.com/en/work-with-us",
   // user_id: 1
   // '}
   Post.create({
     title: req.body.title,
-    post_url: req.body.post_url,
+    post_data: req.body.post_data,
     user_id: req.session.user_id,
   })
     .then((dbPostData) => res.json(dbPostData))

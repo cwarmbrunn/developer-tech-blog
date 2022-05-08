@@ -12,7 +12,7 @@ router.get("/", withAuth, (req, res) => {
     },
     attributes: [
       "id",
-      "post_url",
+      "post_data",
       "title",
       "created_at",
       [

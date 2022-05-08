@@ -4,14 +4,15 @@
 :root{
     --primary: rgb(233, 170, 159);
     --secondary: rgb(100, 100,100);
-    --tertiary: rgb(220, 220, 220);
+    --tertiary: rgb(69, 59, 59);
+
 }
 body, html {
     height: 100;
     padding: 0;
     margin: 0;
     font-family: "Chivo",'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-    color: var(--secondary)
+    color: var(--tertiary)
 }
 
 a{
