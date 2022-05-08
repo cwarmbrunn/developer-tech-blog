@@ -15,9 +15,8 @@ router.get("/", (req, res) => {
       "created_at",
       [
         sequelize.literal(
-          "(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)"
+          "(SELECT COUNT(*) FROM post WHERE post.id = post_id)"
         ),
-        "vote_count",
       ],
     ],
     include: [
@@ -55,9 +54,8 @@ router.get("/:id", (req, res) => {
       "created_at",
       [
         sequelize.literal(
-          "(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id"
+          "(SELECT COUNT(*) FROM post WHERE post.id = post_id)"
         ),
-        "vote_count",
       ],
     ],
     include: [
@@ -140,7 +138,7 @@ router.delete("/:id", withAuth, (req, res) => {
   })
     .then((dbPostData) => {
       if (!dbPostData) {
-        res.status(404).json({ message: "Nop post found with this id!" });
+        res.status(404).json({ message: "No post found with this id!" });
         return;
       }
       res.json(dbPostData);
