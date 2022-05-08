@@ -26,7 +26,6 @@ router.get("/", (req, res) => {
           attributes: ["username"],
         },
       },
-      { model: User.addHook, attributes: ["username"] },
     ],
   })
     .then((dbPostData) => {
