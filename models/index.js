@@ -16,13 +16,13 @@ Post.belongsTo(User, {
 });
 
 // NEED TO CONFIRM IN OFFICE HOURS
-User.belongsToMany(Post, {
-  foreignKey: "user_id",
-});
+// User.belongsToMany(Post, {
+//   foreignKey: "user_id",
+// });
 
-Post.belongsToMany(User, {
-  foreignKey: "user_id",
-});
+// Post.belongsToMany(User, {
+//   foreignKey: "user_id",
+// });
 
 // CONFIRMATION END //
 
