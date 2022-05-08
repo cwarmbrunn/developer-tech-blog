@@ -17,6 +17,7 @@ router.get("/", (req, res) => {
         sequelize.literal(
           "(SELECT COUNT(*) FROM post WHERE post.id = post_id)"
         ),
+        "postCount",
       ],
     ],
     include: [
@@ -56,6 +57,7 @@ router.get("/:id", (req, res) => {
         sequelize.literal(
           "(SELECT COUNT(*) FROM post WHERE post.id = post_id)"
         ),
+        "postCount",
       ],
     ],
     include: [

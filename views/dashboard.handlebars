@@ -15,7 +15,7 @@
     <section>
         <h2> Your Posts </h2>
         <ol>
-            {{#eachj posts as |post|}}
+            {{#each posts as |post|}}
             <li>
                 {{> post-info post}}
                 <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Post</a>
