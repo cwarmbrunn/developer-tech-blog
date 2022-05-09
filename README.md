@@ -12,7 +12,7 @@ Creating a CMS style blog similar to Wordpress, where developers can publish the
 
 **Live Site:**
 
-Heroku link is here (TBD)
+Heroku site is [here](https://tranquil-retreat-22206.herokuapp.com)
 
 ---
 
@@ -36,4 +36,4 @@ No installation necessary - head to the Heroku link to interact with the deploye
 ---
 
 **Screenshot**
-![Screenshot Text TBD ]()
+![A screenshot of the "Tech Blog" website on Heroku - it shows four posts with Lorem ipsum text.](./assets/screenshot.jpg)
