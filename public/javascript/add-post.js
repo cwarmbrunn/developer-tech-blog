@@ -5,7 +5,7 @@ async function newFormHandler(event) {
   // Sets title to query selector with post-title
   const title = document.querySelector('input[name="post-title"]').value;
   // Sets post_url to query selector with post-url
-  const post_data = document.querySelector('input[name="post-data"]').value;
+  const post_data = document.querySelector('textarea[name="post-data"]').value;
 
   const response = await fetch(`/api/posts`, {
     method: "POST",
