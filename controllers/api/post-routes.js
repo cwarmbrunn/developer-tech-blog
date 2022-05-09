@@ -90,7 +90,7 @@ router.get("/:id", (req, res) => {
 router.post("/", withAuth, (req, res) => {
   // Expects the following:
   // {title: "Riot Games Careers Page",
-  // post_data:"https://www.riotgames.com/en/work-with-us",
+  // post_data:"Lorem ipsum",
   // user_id: 1
   // '}
   Post.create({

@@ -5,15 +5,13 @@ async function newFormHandler(event) {
   // Sets title to query selector with post-title
   const title = document.querySelector('input[name="post-title"]').value;
   // Sets post_url to query selector with post-url
-  const post_url = document.querySelector('input[name="post-url"]').value;
-
-
+  const post_data = document.querySelector('input[name="post-data"]').value;
 
   const response = await fetch(`/api/posts`, {
     method: "POST",
     body: JSON.stringify({
       title,
-      post_url,
+      post_data,
     }),
     header: {
       "Content-Type": "application/json",
@@ -26,3 +24,6 @@ async function newFormHandler(event) {
     alert(response.statusText);
   }
 }
+document
+  .querySelector(".new-post-form")
+  .addEventListener("submit", newFormHandler);

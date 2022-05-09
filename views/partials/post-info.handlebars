@@ -4,8 +4,8 @@
         <span>({{post_data}})</span>
     </div>
     <div class="meta">
-        Posted by {{user_id}} on {{format_date created_at}}
+   Posted by {{user.username}} on {{format_date created_at}}
         |
-        <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+        <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a> 
     </div>
 </article>

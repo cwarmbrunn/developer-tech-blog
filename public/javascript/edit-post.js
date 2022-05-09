@@ -1,6 +1,7 @@
 async function editFormHandler(event) {
   event.preventDefault();
   const title = document.querySelector('input[name="post-title"]').value.trim();
+  // Sets post_data to query selector with post-data
 
   const id = window.location.toString().split("/")[
     window.location.toString().split("/").length - 1
