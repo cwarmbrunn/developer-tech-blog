@@ -2,7 +2,9 @@ async function editFormHandler(event) {
   event.preventDefault();
   const title = document.querySelector('input[name="post-title"]').value.trim();
   // Sets post_data to query selector with post-data
-  const post_data = document.querySelector('input[name="post-data"]').value;
+  const post_data = document
+    .querySelector('input[name="post-data"]')
+    .value.trim();
 
   const id = window.location.toString().split("/")[
     window.location.toString().split("/").length - 1
@@ -14,12 +16,13 @@ async function editFormHandler(event) {
       title,
       post_data,
     }),
+
     headers: {
       "Content-Type": "application/json",
     },
   });
   if (response.ok) {
-    document.location.replace("/dashboard/");
+    document.location.replace("/dashboard");
   } else {
     alert(response.statusText);
   }
