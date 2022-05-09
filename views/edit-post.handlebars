@@ -5,8 +5,12 @@
     </h2>
     <form class="edit-post-form">
         <div>
+          <label for="post-title">Title</label>
             <input name="post-title" type="text" value="{{post-title}}"/>
-            <span>({{post.post_data}})</span>
+        </div>
+        <div>
+         <label for="post-data">Post Details</label>
+        <input id="post-data" name="post-data" type="text" value="{{post-data}}"/>
         </div>
         <div>
             <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
