@@ -44,12 +44,12 @@ router.get("/", withAuth, (req, res) => {
     });
 });
 
-// Get Post with ID //
+// Get Post with ID to Edit //
 router.get("/edit/:id", withAuth, (req, res) => {
   Post.findByPk(req.params.id, {
     attributes: [
       "id",
-      "post_url",
+      "post_data",
       "title",
       "created_at",
       [
