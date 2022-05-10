@@ -31,6 +31,7 @@ router.get("/", withAuth, (req, res) => {
           attributes: ["username"],
         },
       },
+      { model: User, attributes: ["username"] },
     ],
   })
     .then((dbPostData) => {
